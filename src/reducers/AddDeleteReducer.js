@@ -4,8 +4,8 @@ const AddDeleteReducer = (state = initialState, action) => {
     case "ADD":
       return [...state, action.payload];
     case "DELETE":
-      const filteredState = state.filter((item, idx) => action.payload != idx);
-      return [filteredState];
+      const filteredState = state.filter((item, idx) => action.payload !== idx);
+      return filteredState;
     default:
       return state;
   }

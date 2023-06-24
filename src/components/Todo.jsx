@@ -35,9 +35,9 @@ const Todo = () => {
         </div>
         <div>
           {todos?.length > 0 ? (
-            todos.map((item, idx) => {
-              return (
-                <ul style={{ listStyleType: "none" }}>
+            <ul style={{ listStyleType: "none" }}>
+              {todos.map((item, idx) => {
+                return (
                   <li key={idx}>
                     <span>
                       {item}
@@ -51,9 +51,9 @@ const Todo = () => {
                       )}
                     </span>
                   </li>
-                </ul>
-              );
-            })
+                );
+              })}
+            </ul>
           ) : (
             <span style={{ color: "red" }}>No items to show</span>
           )}
